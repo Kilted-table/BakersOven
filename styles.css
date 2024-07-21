@@ -89,6 +89,7 @@ footer {
     }
 }
 
+/* Keyframes for animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -114,4 +115,47 @@ footer {
     to {
         transform: translateY(0);
     }
+}
+
+/* Contact form styles */
+form#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form#contact-form label {
+    margin: 10px 0 5px;
+    font-size: 1em;
+    color: #000;
+}
+
+form#contact-form input,
+form#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form#contact-form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+form#contact-form button:hover {
+    background-color: #FFD700;
 }

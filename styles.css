@@ -1,11 +1,11 @@
 body {
     font-family: 'Press Start 2P', cursive;
     background: url('image/background.png') repeat;
-    color: #000; /* Change text color to black for better contrast */
+    color: #000;
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px 2px #FFF; /* Adjust text shadow for better readability */
-    animation: fadeIn 2s ease-in; /* Add fade-in animation to the body */
+    text-shadow: 1px 1px 2px #FFF;
+    animation: fadeIn 2s ease-in;
 }
 
 header {
@@ -14,7 +14,7 @@ header {
     text-align: center;
     padding: 20px 0;
     border-bottom: 3px solid #FFF;
-    animation: slideInFromTop 1s ease-out; /* Add slide-in animation to the header */
+    animation: slideInFromTop 1s ease-out;
 }
 
 nav ul {
@@ -26,33 +26,33 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
-    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation to navigation items */
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 nav ul li a {
     color: #FFF;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s; /* Add smooth transition for hover effect */
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Change color on hover */
+    color: #FFD700;
 }
 
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background to main content */
-    border-radius: 10px; /* Add rounded corners to the content area */
-    animation: fadeIn 2s ease-in; /* Add fade-in animation to the main content */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in;
 }
 
 section {
     margin-bottom: 40px;
     text-align: center;
-    animation: fadeIn 2s ease-in; /* Add fade-in animation to sections */
+    animation: fadeIn 2s ease-in;
 }
 
 section img {
@@ -60,11 +60,11 @@ section img {
     max-width: 400px;
     height: auto;
     margin-top: 20px;
-    transition: transform 0.3s; /* Add smooth transition for hover effect */
+    transition: transform 0.3s;
 }
 
 section img:hover {
-    transform: scale(1.1); /* Scale image on hover */
+    transform: scale(1.1);
 }
 
 footer {
@@ -73,7 +73,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     border-top: 3px solid #FFF;
-    animation: slideInFromBottom 1s ease-out; /* Add slide-in animation to the footer */
+    animation: slideInFromBottom 1s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -89,7 +89,6 @@ footer {
     }
 }
 
-/* Keyframes for animations */
 @keyframes fadeIn {
     from {
         opacity: 0;

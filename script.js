@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
     // Lazy load images
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');

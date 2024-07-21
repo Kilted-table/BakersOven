@@ -139,6 +139,7 @@ form#contact-form label {
 form#contact-form input,
 form#contact-form textarea {
     width: 100%;
+    max-width: 500px; /* Ensure the inputs do not overstretch the page */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;

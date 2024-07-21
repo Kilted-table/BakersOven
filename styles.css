@@ -161,4 +161,56 @@ form#contact-form button:hover {
     background-color: #FFD700;
 }
 
+/* ... previous styles ... */
+
+/* Character sprite */
+#sprite {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    background: url('image/sprite.png') no-repeat;
+    background-size: cover;
+    animation: spriteBounce 2s infinite alternate;
+}
+
+@keyframes spriteBounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+/* RPG-style button hover effect */
+button, nav ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+button::before, nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 215, 0, 0.5);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+button:hover::before, nav ul li a:hover::before {
+    left: 100%;
+}
+
+/* Background */
+body {
+    background: url('image/background.png') repeat;
+    background-size: cover;
+}
+
 /* Adjust styling for contact

@@ -148,17 +148,4 @@ form#contact-form textarea {
 
 form#contact-form button {
     padding: 10px 20px;
-    background-color: #000;
-    color: #FFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-form#contact-form button:hover {
-    background-color: #FFD700;
-}
-
-/* Adjust styling for contact
+   

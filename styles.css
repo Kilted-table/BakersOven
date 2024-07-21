@@ -138,7 +138,7 @@ form#contact-form label {
 
 form#contact-form input,
 form#contact-form textarea {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width to fit within the container */
     max-width: 500px; /* Ensure the inputs do not overstretch the page */
     padding: 10px;
     margin-bottom: 20px;
@@ -159,4 +159,10 @@ form#contact-form button {
 
 form#contact-form button:hover {
     background-color: #FFD700;
+}
+
+/* Adjust styling for contact email link */
+section p a {
+    word-break: break-word; /* Ensures long email addresses wrap within the container */
+    display: inline-block; /* Keeps the link block level for better wrapping */
 }

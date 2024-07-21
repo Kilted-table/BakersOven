@@ -1,31 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const backgroundMusic = document.getElementById('background-music');
-    backgroundMusic.play();
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+    });
 
-    const character = document.createElement('div');
-    character.classList.add('character');
-    document.body.appendChild(character);
-
-    let isMovingRight = true;
-    let characterPosition = 50;
-
-    function moveCharacter() {
-        if (isMovingRight) {
-            characterPosition += 2;
-            if (characterPosition >= window.innerWidth - 50) {
-                isMovingRight = false;
-                character.style.transform = 'scaleX(-1) translateX(-50%)';
-            }
-        } else {
-            characterPosition -= 2;
-            if (characterPosition <= 0) {
-                isMovingRight = true;
-                character.style.transform = 'scaleX(1) translateX(-50%)';
-            }
-        }
-        character.style.left = characterPosition + 'px';
-        requestAnimationFrame(moveCharacter);
-    }
-
-    moveCharacter();
+    // Smooth scroll for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });

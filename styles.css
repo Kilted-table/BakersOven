@@ -1,0 +1,141 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: url('images/background.png') repeat;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 2px #FFF;
+    animation: fadeIn 2s ease-in;
+    overflow: hidden;
+}
+
+header {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #FFF;
+    animation: slideInFromTop 1s ease-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in;
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+    margin-bottom: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+section img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid #FFF;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    section img {
+        max-width: 90%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Character animation styles */
+.character {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 50px; /* Initial position from the left */
+    width: 50px;
+    height: 50px;
+    background: url('images/character.png') no-repeat;
+    background-size: contain;
+    animation: moveCharacter 5s linear infinite alternate;
+}
+
+@keyframes moveCharacter {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(100vw - 100px));
+    }
+}

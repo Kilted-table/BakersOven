@@ -1,19 +1,26 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #FFF;
+    --highlight-color: #FFD700;
+    --font-family: 'Press Start 2P', cursive;
+}
+
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: var(--font-family);
     background: url('image/new-background-2.png') repeat;
-    color: #000;
+    color: var(--primary-color);
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px 2px #FFF;
+    text-shadow: 1px 1px 2px var(--secondary-color);
     animation: fadeIn 2s ease-in;
 }
 
 header {
-    background-color: #000;
-    color: #FFF;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 20px 0;
-    border-bottom: 3px solid #FFF;
+    border-bottom: 3px solid var(--secondary-color);
     animation: slideInFromTop 1s ease-out;
 }
 
@@ -30,14 +37,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFF;
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FFD700;
+    color: var(--highlight-color);
 }
 
 main {
@@ -68,11 +75,11 @@ section img:hover {
 }
 
 footer {
-    background-color: #000;
-    color: #FFF;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 10px 0;
-    border-top: 3px solid #FFF;
+    border-top: 3px solid var(--secondary-color);
     animation: slideInFromBottom 1s ease-out;
 }
 
@@ -133,7 +140,7 @@ form#contact-form {
 form#contact-form label {
     margin: 10px 0 5px;
     font-size: 1em;
-    color: #000;
+    color: var(--primary-color);
 }
 
 form#contact-form input,
@@ -148,8 +155,8 @@ form#contact-form textarea {
 
 form#contact-form button {
     padding: 10px 20px;
-    background-color: #000;
-    color: #FFF;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -158,7 +165,7 @@ form#contact-form button {
 }
 
 form#contact-form button:hover {
-    background-color: #FFD700;
+    background-color: var(--highlight-color);
 }
 
 /* Ensure email does not overhang */

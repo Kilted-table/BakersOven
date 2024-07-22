@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 :root {
     --primary-color: #000;
     --secondary-color: #FFF;
     --highlight-color: #FFD700;
-    --font-family: 'Press Start 2P', cursive;
+    --font-family-heading: 'Press Start 2P', cursive;
+    --font-family-body: 'VT323', monospace;
     --background-image: url('image/new-background-2.png');
     --dark-mode-bg-color: rgba(0, 0, 0, 0.8);
     --dark-mode-text-color: #00FF00;
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family-body);
     background: var(--background-image) repeat;
     color: var(--primary-color);
     margin: 0;
@@ -25,6 +28,7 @@ header {
     padding: 20px 0;
     border-bottom: 3px solid var(--secondary-color);
     animation: slideInFromTop 1s ease-out;
+    font-family: var(--font-family-heading);
 }
 
 nav ul {
@@ -32,6 +36,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    font-family: var(--font-family-body);
 }
 
 nav ul li {
@@ -54,7 +59,7 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Light mode background */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     animation: fadeIn 2s ease-in;
 }
@@ -84,6 +89,7 @@ footer {
     padding: 10px 0;
     border-top: 3px solid var(--secondary-color);
     animation: slideInFromBottom 1s ease-out;
+    font-family: var(--font-family-heading);
 }
 
 @media (max-width: 768px) {
@@ -134,7 +140,7 @@ form#contact-form {
     align-items: center;
     max-width: 600px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Light mode background */
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

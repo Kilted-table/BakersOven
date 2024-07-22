@@ -1,45 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Existing JavaScript content
-
-    // Modal functionality
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.style.display = "flex";
-        setTimeout(() => {
-            modal.querySelector('.modal-content').classList.add('show-back');
-        }, 100);
-    }
-
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.querySelector('.modal-content').classList.remove('show-back');
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 600);
-    }
-
-    document.querySelectorAll('section img').forEach(img => {
-        img.addEventListener('click', (e) => {
-            const sectionId = e.target.closest('section').id;
-            openModal(`modal-${sectionId}`);
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
         });
     });
 
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target.classList.contains('modal-close') || e.target === modal) {
-                closeModal(modal.id);
-            }
+    // Smooth scroll for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
 
-    // Add close buttons to each modal
-    document.querySelectorAll('.modal').forEach(modal => {
-        const closeButton = document.createElement('button');
-        closeButton.classList.add('modal-close');
-        closeButton.innerHTML = '&times;';
-        modal.appendChild(closeButton);
+    // Form validation
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name && email && message) {
+            alert('Message sent successfully!');
+            form.reset();
+        } else {
+            alert('Please fill in all fields.');
+        }
     });
 
-    // Existing JavaScript content
+    // Initialize Slick Carousel
+    $('.video-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
+
+    // Dark mode toggle
+    const toggleDarkMode = document.getElementById('dark-mode-toggle');
+    toggleDarkMode.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
+    });
 });

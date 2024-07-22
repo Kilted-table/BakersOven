@@ -239,3 +239,31 @@ header.dark-mode, footer.dark-mode {
 .dark-mode form#contact-form button:hover {
     background-color: var(--highlight-color);
 }
+
+.team-carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.team-member {
+    text-align: center;
+    padding: 20px;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 10px;
+    transition: transform 0.3s;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 1em;
+}
+

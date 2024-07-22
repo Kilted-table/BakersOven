@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize Slick Carousel
-    $('.video-carousel').slick({
+    $('.video-carousel, .team-carousel').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -80,11 +80,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const overlay = container.querySelector('.overlay');
             const overlayText = container.querySelector('.overlay .overlay-text');
             
-            // Show overlay and apply typing effect
-            container.classList.add('clicked');
-            overlayText.style.display = 'block';
-            overlayText.innerHTML = ''; // Clear previous text
-            typeEffect(overlayText, overlayText.getAttribute('data-text'));
+            // Ensure the overlay text element is reset before typing effect
+            if (!container.classList.contains('clicked')) {
+                overlayText.innerHTML = ''; // Clear previous text
+                typeEffect(overlayText, overlayText.getAttribute('data-text'));
+                container.classList.add('clicked');
+            } else {
+                overlayText.innerHTML = ''; // Clear previous text
+                typeEffect(overlayText, overlayText.getAttribute('data-text'));
+            }
+
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'all';
         });
     });
 });

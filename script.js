@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Initialize Slick Carousel
+    $('.video-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000
+    });
+
     // Modal functionality
     function openModal(modalId) {
         const modal = document.getElementById(modalId);

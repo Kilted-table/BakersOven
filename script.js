@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             container.classList.add('clicked');
             overlayText.style.display = 'block';
             overlayText.innerHTML = ''; // Clear previous text
-            typeEffect(overlayText, overlayText.innerText);
+            typeEffect(overlayText, overlayText.getAttribute('data-text'));
         });
     });
 });

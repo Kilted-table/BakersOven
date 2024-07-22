@@ -178,6 +178,7 @@ footer {
 
 .section-img-container.clicked .overlay {
     opacity: 1;
+    pointer-events: all;
 }
 
 .terminal-effect {

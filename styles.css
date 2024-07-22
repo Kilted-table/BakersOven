@@ -1,3 +1,4 @@
+/* Existing styles */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixel&display=swap');
 
 :root {
@@ -139,96 +140,7 @@ footer {
     }
 }
 
-form#contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: var(--body-font-size);
-}
-
-form#contact-form label {
-    margin: 10px 0 5px;
-    font-size: 1em;
-    color: var(--primary-color);
-}
-
-form#contact-form input,
-form#contact-form textarea {
-    width: calc(100% - 20px);
-    max-width: 500px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form#contact-form button {
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-form#contact-form button:hover {
-    background-color: var(--highlight-color);
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: var(--dark-mode-text-color);
-}
-
-header.dark-mode, footer.dark-mode {
-    background-color: #1f1f1f;
-    color: var(--dark-mode-text-color);
-}
-
-.dark-mode nav ul li a {
-    color: var(--dark-mode-text-color);
-}
-
-.dark-mode nav ul li a:hover {
-    color: var(--highlight-color);
-}
-
-.dark-mode main,
-.dark-mode form#contact-form {
-    background-color: var(--dark-mode-bg-color);
-    color: var(--dark-mode-text-color);
-}
-
-.dark-mode form#contact-form label {
-    color: var(--dark-mode-text-color);
-}
-
-.dark-mode form#contact-form input,
-.dark-mode form#contact-form textarea {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--dark-mode-text-color);
-    border: 1px solid var(--dark-mode-text-color);
-}
-
-.dark-mode form#contact-form button {
-    background-color: var(--dark-mode-text-color);
-    color: var(--dark-mode-bg-color);
-}
-
-.dark-mode form#contact-form button:hover {
-    background-color: var(--highlight-color);
-
-}
-
-/* Ensure this is added to your existing CSS */
+/* New styles */
 .section-img-container {
     position: relative;
     display: inline-block;
@@ -289,11 +201,3 @@ header.dark-mode, footer.dark-mode {
         border-color: #00FF00;
     }
 }
-
-/* New styles for additional text */
-.additional-text {
-    margin-top: 10px;
-    display: none;
-}
-
-

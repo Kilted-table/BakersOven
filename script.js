@@ -74,31 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
         type();
     }
 
-    // Handle single and double tap
+    // Handle image click to display typing text
     document.querySelectorAll('.section-img-container').forEach(container => {
-        let tapCount = 0;
-
         container.addEventListener('click', () => {
-            tapCount++;
-            const overlayText = container.parentElement.querySelector('.section-text').innerText;
+            const overlayText = container.querySelector('.overlay .overlay-text').innerText;
             const overlaySpan = container.querySelector('.overlay .overlay-text');
 
             overlaySpan.style.display = 'block';
             overlaySpan.innerHTML = ''; // Clear previous text
             typeEffect(overlaySpan, overlayText);
-
-            if (tapCount === 2) {
-                const additionalTextElement = container.querySelector('.overlay .additional-text');
-                const additionalText = 'Additional information displayed here.';
-                additionalTextElement.style.display = 'block';
-                additionalTextElement.innerHTML = ''; // Clear previous text
-                typeEffect(additionalTextElement, additionalText);
-                tapCount = 0; // Reset tap count
-            }
-
-            setTimeout(() => {
-                tapCount = 0; // Reset tap count after 500ms
-            }, 500);
         });
     });
 });

@@ -60,18 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Typing effect functionality
     function typeEffect(element, text) {
         let i = 0;
+        let interval;
+
         function type() {
             if (i < text.length) {
                 element.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(type, 50);
             } else {
+                clearInterval(interval);
                 element.classList.remove('terminal-effect');
             }
         }
+
+        clearInterval(interval);
         element.classList.add('terminal-effect');
         element.innerHTML = '';
-        type();
+        interval = setInterval(type, 50);
     }
 
     // Handle image click to display typing text
@@ -79,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.addEventListener('click', () => {
             const overlay = container.querySelector('.overlay');
             const overlayText = container.querySelector('.overlay .overlay-text');
-            
+
             // Ensure the overlay text element is reset before typing effect
             if (!container.classList.contains('clicked')) {
                 overlayText.innerHTML = ''; // Clear previous text

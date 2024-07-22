@@ -177,3 +177,21 @@ form#contact-form input[type="email"] {
 #contact p a[href^="mailto"] {
     font-size: 0.8em; /* Adjust this value as needed */
 }
+
+.video-carousel {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.video-carousel iframe {
+    width: 100%;
+    height: auto;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #000; /* Change color to match your site's theme */
+}

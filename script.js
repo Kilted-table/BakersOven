@@ -34,10 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Additional enhancements
-    // Example: Dark mode toggle
-    const toggleDarkMode = document.getElementById('dark-mode-toggle');
-    toggleDarkMode.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+    // Initialize Slick Carousel
+    $('.video-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
     });
 });

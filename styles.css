@@ -1,6 +1,6 @@
 body {
     font-family: 'Press Start 2P', cursive;
-    background: url('image/new-background.png') repeat;
+    background: url('image/new-background-2.png') repeat;
     color: #000;
     margin: 0;
     padding: 0;
@@ -159,4 +159,9 @@ form#contact-form button {
 
 form#contact-form button:hover {
     background-color: #FFD700;
+}
+
+/* Ensure email does not overhang */
+form#contact-form input[type="email"] {
+    word-break: break-word;
 }

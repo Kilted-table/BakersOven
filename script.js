@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Existing JavaScript content
-
     // Modal functionality
     function openModal(modalId) {
         const modal = document.getElementById(modalId);
@@ -41,5 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.appendChild(closeButton);
     });
 
-    // Existing JavaScript content
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.querySelectorAll('header, footer').forEach(el => el.classList.toggle('dark-mode'));
+    });
 });

@@ -4,6 +4,8 @@
     --highlight-color: #FFD700;
     --font-family: 'Press Start 2P', cursive;
     --background-image: url('image/new-background-2.png');
+    --dark-mode-bg-color: rgba(0, 0, 0, 0.8);
+    --dark-mode-text-color: #00FF00;
 }
 
 body {
@@ -52,7 +54,7 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Light mode background */
     border-radius: 10px;
     animation: fadeIn 2s ease-in;
 }
@@ -132,7 +134,7 @@ form#contact-form {
     align-items: center;
     max-width: 600px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Light mode background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -171,18 +173,44 @@ form#contact-form button:hover {
 
 body.dark-mode {
     background-color: #121212;
-    color: #ffffff;
+    color: var(--dark-mode-text-color);
 }
 
 header.dark-mode, footer.dark-mode {
     background-color: #1f1f1f;
-    color: #ffffff;
+    color: var(--dark-mode-text-color);
 }
 
 .dark-mode nav ul li a {
-    color: #ffffff;
+    color: var(--dark-mode-text-color);
 }
 
 .dark-mode nav ul li a:hover {
-    color: #ffd700;
+    color: var(--highlight-color);
+}
+
+.dark-mode main,
+.dark-mode form#contact-form {
+    background-color: var(--dark-mode-bg-color);
+    color: var(--dark-mode-text-color);
+}
+
+.dark-mode form#contact-form label {
+    color: var(--dark-mode-text-color);
+}
+
+.dark-mode form#contact-form input,
+.dark-mode form#contact-form textarea {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--dark-mode-text-color);
+    border: 1px solid var(--dark-mode-text-color);
+}
+
+.dark-mode form#contact-form button {
+    background-color: var(--dark-mode-text-color);
+    color: var(--dark-mode-bg-color);
+}
+
+.dark-mode form#contact-form button:hover {
+    background-color: var(--highlight-color);
 }

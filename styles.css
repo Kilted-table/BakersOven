@@ -183,7 +183,7 @@ form#contact-form input[type="email"] {
     margin: 0 auto;
 }
 
-.video-carousel iframe {
+.video-carousel img, .video-carousel iframe {
     width: 100%;
     height: auto;
 }
@@ -195,3 +195,4 @@ form#contact-form input[type="email"] {
 .slick-prev:before, .slick-next:before {
     color: #000; /* Change color to match your site's theme */
 }
+

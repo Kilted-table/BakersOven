@@ -4,7 +4,7 @@
     --primary-color: #000;
     --secondary-color: #FFF;
     --highlight-color: #FFD700;
-    --font-family-heading: 'Press Start 2P', cursive;
+    --font-family-heading: 'Press Start 2P', monospace;
     --font-family-body: 'Press Start 2P', monospace;
     --background-image: url('image/new-background-2.png');
     --dark-mode-bg-color: rgba(0, 0, 0, 0.8);
@@ -194,7 +194,7 @@ header.dark-mode, footer.dark-mode {
     background-color: #1f1f1f;
     color: var (--dark-mode-text-color);
 
-    
+
 /* Pixelated borders for sections and buttons */
 section, button {
     border: 4px solid var(--secondary-color);

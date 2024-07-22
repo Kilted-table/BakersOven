@@ -288,3 +288,66 @@ header.dark-mode, footer.dark-mode {
     font-size: 1.2em;
     border-radius: 50%;
 }
+
+/* Add this to the existing CSS */
+.section-img-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.section-img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.section-img-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevent overlay from blocking image click */
+}
+
+.section-img-container .overlay span {
+    display: none;
+    white-space: pre-wrap;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1em;
+}
+
+.section-img-container:hover img {
+    transform: scale(1.1);
+}
+
+.section-img-container:hover .overlay {
+    opacity: 1;
+}
+
+.terminal-effect {
+    display: inline-block;
+    border-right: 2px solid #00FF00;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #00FF00;
+    }
+}
+
+

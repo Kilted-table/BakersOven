@@ -76,9 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll('.section-img-container').forEach(container => {
         container.addEventListener('click', () => {
-            const overlayText = container.nextElementSibling.querySelector('p').innerText;
+            const overlayText = container.parentElement.querySelector('.section-text').innerText;
             const overlaySpan = container.querySelector('.overlay span');
             overlaySpan.style.display = 'block';
+            overlaySpan.innerHTML = ''; // Clear previous text
             typeEffect(overlaySpan, overlayText);
         });
     });

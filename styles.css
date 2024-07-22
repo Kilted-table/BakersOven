@@ -225,10 +225,10 @@ header.dark-mode, footer.dark-mode {
 
 .dark-mode form#contact-form button:hover {
     background-color: var(--highlight-color);
-    
+
 }
 
-/* Add this to the existing CSS */
+/* Ensure this is added to your existing CSS */
 .section-img-container {
     position: relative;
     display: inline-block;
@@ -251,6 +251,7 @@ header.dark-mode, footer.dark-mode {
     background: rgba(0, 0, 0, 0.8);
     color: #00FF00;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -287,6 +288,12 @@ header.dark-mode, footer.dark-mode {
     50% {
         border-color: #00FF00;
     }
+}
+
+/* New styles for additional text */
+.additional-text {
+    margin-top: 10px;
+    display: none;
 }
 
 

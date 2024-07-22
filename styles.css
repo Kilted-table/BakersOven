@@ -71,21 +71,21 @@ main {
 
 /* Ensure section containers are centered */
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 40px;
     text-align: center;
     animation: fadeIn 2s ease-in;
     font-size: var(--body-font-size);
 }
 
+section h2, section p {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 /* Ensure image containers are centered */
 .section-img-container {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     overflow: hidden;
     cursor: pointer;
     width: 100%;

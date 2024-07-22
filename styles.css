@@ -6,7 +6,7 @@
     --highlight-color: #FFD700;
     --font-family-heading: 'Press Start 2P', monospace;
     --font-family-body: 'Press Start 2P', monospace;
-    --background-image: url('image/new-background-2.png');
+    --background-image: url('background.webp');
     --dark-mode-bg-color: rgba(0, 0, 0, 0.8);
     --dark-mode-text-color: #00FF00;
     --body-font-size: 16px; /* Default body font size */

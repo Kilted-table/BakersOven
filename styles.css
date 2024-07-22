@@ -85,10 +85,6 @@ section img {
     transition: transform 0.3s;
 }
 
-section img:hover {
-    transform: scale(1.1);
-}
-
 footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -145,6 +141,7 @@ footer {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .section-img-container img {
@@ -179,11 +176,7 @@ footer {
     font-size: 1em;
 }
 
-.section-img-container:hover img {
-    transform: scale(1.1);
-}
-
-.section-img-container:hover .overlay {
+.section-img-container.clicked .overlay {
     opacity: 1;
 }
 
@@ -200,4 +193,48 @@ footer {
     50% {
         border-color: #00FF00;
     }
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: var(--dark-mode-text-color);
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1f1f1f;
+    color: var(--dark-mode-text-color);
+}
+
+.dark-mode nav ul li a {
+    color: var(--dark-mode-text-color);
+}
+
+.dark-mode nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+.dark-mode main,
+.dark-mode form#contact-form {
+    background-color: var(--dark-mode-bg-color);
+    color: var(--dark-mode-text-color);
+}
+
+.dark-mode form#contact-form label {
+    color: var(--dark-mode-text-color);
+}
+
+.dark-mode form#contact-form input,
+.dark-mode form#contact-form textarea {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--dark-mode-text-color);
+    border: 1px solid var(--dark-mode-text-color);
+}
+
+.dark-mode form#contact-form button {
+    background-color: var(--dark-mode-text-color);
+    color: var(--dark-mode-bg-color);
+}
+
+.dark-mode form#contact-form button:hover {
+    background-color: var(--highlight-color);
 }

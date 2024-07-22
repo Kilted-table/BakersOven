@@ -77,12 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle image click to display typing text
     document.querySelectorAll('.section-img-container').forEach(container => {
         container.addEventListener('click', () => {
-            const overlayText = container.querySelector('.overlay .overlay-text').innerText;
-            const overlaySpan = container.querySelector('.overlay .overlay-text');
-
-            overlaySpan.style.display = 'block';
-            overlaySpan.innerHTML = ''; // Clear previous text
-            typeEffect(overlaySpan, overlayText);
+            const overlay = container.querySelector('.overlay');
+            const overlayText = container.querySelector('.overlay .overlay-text');
+            
+            // Show overlay and apply typing effect
+            container.classList.add('clicked');
+            overlayText.style.display = 'block';
+            overlayText.innerHTML = ''; // Clear previous text
+            typeEffect(overlayText, overlayText.innerText);
         });
     });
 });

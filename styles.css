@@ -3,11 +3,12 @@
     --secondary-color: #FFF;
     --highlight-color: #FFD700;
     --font-family: 'Press Start 2P', cursive;
+    --background-image: url('image/new-background-2.png');
 }
 
 body {
     font-family: var(--font-family);
-    background: url('image/new-background-2.png') repeat;
+    background: var(--background-image) repeat;
     color: var(--primary-color);
     margin: 0;
     padding: 0;
@@ -145,8 +146,8 @@ form#contact-form label {
 
 form#contact-form input,
 form#contact-form textarea {
-    width: calc(100% - 20px); /* Adjust width to fit within the container */
-    max-width: 500px; /* Ensure the inputs do not overstretch the page */
+    width: calc(100% - 20px);
+    max-width: 500px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -168,33 +169,6 @@ form#contact-form button:hover {
     background-color: var(--highlight-color);
 }
 
-/* Ensure email does not overhang */
-form#contact-form input[type="email"] {
-    word-break: break-word;
-}
-
-/* Adjust font size for email in contact info */
-#contact p a[href^="mailto"] {
-    font-size: 0.8em; /* Adjust this value as needed */
-}
-
-.video-carousel {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.video-carousel img, .video-carousel iframe {
-    width: 100%;
-    height: auto;
-}
-
-.slick-dots {
-    bottom: -30px;
-}
-
-.slick-prev:before, .slick-next:before {
-    color: #000; /* Change color to match your site's theme */
-}
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -212,4 +186,3 @@ header.dark-mode, footer.dark-mode {
 .dark-mode nav ul li a:hover {
     color: #ffd700;
 }
-

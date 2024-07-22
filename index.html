@@ -16,11 +16,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
-
     <script src="script.js" defer></script>
 </head>
 <body>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
     <header role="banner">
         <h1>The Bakers Oven</h1>
         <nav role="navigation">
@@ -59,17 +58,11 @@
         <section id="portfolio" aria-labelledby="portfolio-heading">
             <h2 id="portfolio-heading">Portfolio</h2>
             <p>Check out some of our latest projects. We have worked with various artists across different genres to produce high-quality music.</p>
-            <img src="image/portfolio.png" alt="Our portfolio" loading="lazy">
-        <section id="portfolio" aria-labelledby="portfolio-heading">
-    <h2 id="portfolio-heading">Portfolio</h2>
-    <p>Check out some of our latest projects. We have worked with various artists across different genres to produce high-quality music.</p>
-    <div class="video-carousel">
-        <!-- YouTube video iframes -->
-        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe></div>
-        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe></div>
-        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe></div>
-    </div>
-</section>
+            <div class="video-carousel">
+                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe></div>
+            </div>
         </section>
         <section id="equipment" aria-labelledby="equipment-heading">
             <h2 id="equipment-heading">Instrument Equipment Hire</h2>
@@ -107,13 +100,10 @@
                 <h3 id="contact-form-heading">Send Us a Message</h3>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                
                 <button type="submit">Send Message</button>
             </form>
         </section>

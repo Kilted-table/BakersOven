@@ -136,7 +136,6 @@ footer {
     }
 }
 
-/* New styles */
 .section-img-container {
     position: relative;
     display: inline-block;
@@ -169,16 +168,16 @@ footer {
     pointer-events: none; /* Prevent overlay from blocking image click */
 }
 
-.section-img-container .overlay span {
-    display: none;
-    white-space: pre-wrap;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 1em;
-}
-
 .section-img-container.clicked .overlay {
     opacity: 1;
     pointer-events: all;
+}
+
+.section-img-container .overlay span {
+    display: block; /* Ensure text is visible */
+    white-space: pre-wrap;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1em;
 }
 
 .terminal-effect {
@@ -266,4 +265,5 @@ header.dark-mode, footer.dark-mode {
 .team-member p {
     font-size: 1em;
 }
+
 

@@ -281,6 +281,8 @@ button {
     background-color: var(--highlight-color);
 }
 
+/* Existing CSS content */
+
 .modal {
     display: none;
     position: fixed;
@@ -306,6 +308,7 @@ button {
     align-items: center;
     transform-style: preserve-3d;
     transition: transform 0.6s;
+    position: relative;
 }
 
 .modal-content .modal-front,
@@ -342,3 +345,6 @@ button {
     font-size: 1.2em;
     border-radius: 50%;
 }
+
+/* Existing CSS content */
+

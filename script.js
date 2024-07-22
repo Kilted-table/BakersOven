@@ -33,4 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('Please fill in all fields.');
         }
     });
+
+    // Additional enhancements
+    // Example: Dark mode toggle
+    const toggleDarkMode = document.getElementById('dark-mode-toggle');
+    toggleDarkMode.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
 });

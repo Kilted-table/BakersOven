@@ -165,3 +165,8 @@ form#contact-form button:hover {
 form#contact-form input[type="email"] {
     word-break: break-word;
 }
+
+/* Adjust font size for email in contact info */
+#contact p a[href^="mailto"] {
+    font-size: 0.8em; /* Adjust this value as needed */
+}

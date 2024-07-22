@@ -1,6 +1,6 @@
 body {
     font-family: 'Press Start 2P', cursive;
-    background: url('image/background.png') repeat;
+    background: url('image/new-background.png') repeat;
     color: #000;
     margin: 0;
     padding: 0;
@@ -159,51 +159,4 @@ form#contact-form button {
 
 form#contact-form button:hover {
     background-color: #FFD700;
-}
-
-/* Ensuring text within contact section does not overhang */
-section#contact p {
-    word-wrap: break-word;
-    margin: 10px 0;
-    line-height: 1.5;
-}
-
-section#contact a {
-    color: #000;
-    text-decoration: underline;
-    word-break: break-word;
-}
-
-@media (max-width: 768px) {
-    section#contact p {
-        font-size: 0.9em;
-    }
-    section#contact a {
-        font-size: 0.9em;
-    }
-}
-
-/* Add to existing styles.css */
-.team-member {
-    text-align: center;
-    margin: 20px;
-}
-
-.team-member img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
-}
-
-.team-member img:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .team-member {
-        margin: 10px 0;
-    }
 }
